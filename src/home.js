@@ -35,7 +35,7 @@ const Home = () =>{
     console.log(ps);
     ps[0].innerHTML = "<u>Home</u>";
     ps[0].setAttribute("id","currentPage");
-    content.appendChild("middle");
+    content.appendChild(middle);
     middle.setAttribute("id","middle");
     middle.appendChild(introduction);
     introduction.textContent = "You know the rules of bodybuilding, eat big to get big. Garfield's Bulkers Paradise has meal options for all the fellow gymrats that are on a bulk. We serve foods high in calories but with the right macros to help you in your bodybuilding journey.";
