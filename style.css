@@ -28,10 +28,10 @@
 }
 
 body {
-    background-image: url("./garfield.jpeg");
+    background-image: url("./img/garfield.jpeg");
     background-size: 100px;
     margin: 0px;
-    font-family: "Roboto",
+    font-family: "Roboto";
 }
 
 #content {
@@ -56,6 +56,7 @@ h1 {
     font-family: "AnandaBlack";
     font-size: 50px;
     color: orange;
+    -webkit-text-stroke: 0.1px white;
 }
 
 span {
@@ -86,6 +87,44 @@ span > p:hover {
     -webkit-text-stroke: 1.3px red;
     font-weight: bold;
     padding: 0px 30px 30px;
+}
+
+#middleMenu {
+    background-color: rgb(227, 175, 217);
+    justify-self: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    width: 800px;
+    border-radius: 15px;
+    font-family: "Roboto";
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    -webkit-text-stroke: 1.3px red;
+    font-weight: bold;
+    padding: 30px 30px 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuOption {
+    padding-top: 15px;
+}
+
+.menuOption > p {
+    margin-bottom: 15px;
+}
+
+.menuOption:hover{
+    cursor:pointer;
+    background-color: rgb(178, 132, 169);
+    border-radius: 10px;
+}
+
+.menuOption > img {
+    height: 120px;
 }
 
 #homeImage {
