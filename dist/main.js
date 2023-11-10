@@ -48,9 +48,12 @@ __webpack_require__.r(__webpack_exports__);
 const middle = document.createElement("div");
 
 const Home = () =>{
-    console.log(_header_js__WEBPACK_IMPORTED_MODULE_0__.ps);
     _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[0].innerHTML = "<u>Home</u>";
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[1].innerHTML = "Menu";
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[2].innerHTML = "Contact";
     _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[0].setAttribute("id","currentPage");
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[1].setAttribute("id","");
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[2].setAttribute("id","");
     _header_js__WEBPACK_IMPORTED_MODULE_0__.content.appendChild(middle);
     middle.setAttribute("id","middle");
     const introduction = document.createElement("p")
@@ -59,7 +62,7 @@ const Home = () =>{
     introduction.textContent = "You know the rules of bodybuilding, eat big to get big. Garfield's Bulkers Paradise has meal options for all the fellow gymrats that are on a bulk. We serve foods high in calories but with the right macros to help you in your bodybuilding journey.";
     middle.appendChild(img);
     img.setAttribute("id","homeImage");
-    img.setAttribute("src","./buff-garfield.png");
+    img.setAttribute("src","./img/buff-garfield.png");
     const ul = document.createElement("ul");
     middle.appendChild(ul);
     ul.appendChild(document.createElement("li"));
@@ -78,6 +81,78 @@ const Home = () =>{
     lis[4].setAttribute("id","miniTitle");
     lis[4].textContent = "Location";
     lis[5].textContent = "711 Maple Street";
+}
+
+
+
+/***/ }),
+/* 3 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Menu: () => (/* binding */ Menu)
+/* harmony export */ });
+/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+// {/* <div id="middleMenu">
+//             <div class="menuOption">
+//                 <img src="img/lasagna.png">
+//                 <p>Protein Lasagna</p>
+//             </div>
+//             <div class="menuOption">
+//                 <img src="img/chicken.png">
+//                 <p>Chicken and Rice</p>
+//             </div>
+//             <div class="menuOption">
+//                 <img src="img/steak.png">
+//                 <p>Steak</p>
+//             </div>
+//             <div class="menuOption">
+//                 <img src="img/english-breakfast.png">
+//                 <p>English Breakfast</p>
+//             </div>
+//             <div class="menuOption">
+//                 <img src="img/pancakes.png">
+//                 <p>Protein Pancakes</p>
+//             </div>
+//             <div class="menuOption">
+//                 <img src="img/protein-shake.png">
+//                 <p>Protein Shake</p>
+//             </div>
+//         </div> */}
+
+
+
+const Menu = () => {
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[0].innerHTML = "Home";
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[1].innerHTML = "<u>Menu</u>";
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[2].innerHTML = "Contact";
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[0].setAttribute("id","");
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[1].setAttribute("id","currentPage");
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[2].setAttribute("id","");
+    middle.setAttribute("id","middleMenu");
+}
+
+
+
+/***/ }),
+/* 4 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Contact: () => (/* binding */ Contact)
+/* harmony export */ });
+/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+
+
+const Contact = () => {
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[0].innerHTML = "Home";
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[1].innerHTML = "Menu";
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[2].innerHTML = "<u>Contact</u>";
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[0].setAttribute("id","");
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[1].setAttribute("id","");
+    _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[2].setAttribute("id","currentPage");
 }
 
 
@@ -145,13 +220,37 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-console.log("Heyyyy")
+/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 
-;
+
+
 
 
 (0,_header_js__WEBPACK_IMPORTED_MODULE_0__.Header)();
 (0,_home_js__WEBPACK_IMPORTED_MODULE_1__.Home)();
+
+const buttons = document.querySelectorAll("#header>span>p");
+const middle = document.querySelector("#middle");
+
+const clearMiddle = () => {
+    middle.innerHTML = "";
+}
+
+buttons.forEach((button) => button.addEventListener("click", () => {
+    if (button.textContent === "Home"){
+        clearMiddle();
+        (0,_home_js__WEBPACK_IMPORTED_MODULE_1__.Home)();
+    }
+    else if (button.textContent === "Menu"){
+        clearMiddle();
+        (0,_menu_js__WEBPACK_IMPORTED_MODULE_2__.Menu)();
+    }
+    else {
+        clearMiddle();
+        (0,_contact_js__WEBPACK_IMPORTED_MODULE_3__.Contact)();
+    }
+}))
 })();
 
 /******/ })()

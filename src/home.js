@@ -3,9 +3,12 @@ import { ps, content } from './header.js';
 const middle = document.createElement("div");
 
 const Home = () =>{
-    console.log(ps);
     ps[0].innerHTML = "<u>Home</u>";
+    ps[1].innerHTML = "Menu";
+    ps[2].innerHTML = "Contact";
     ps[0].setAttribute("id","currentPage");
+    ps[1].setAttribute("id","");
+    ps[2].setAttribute("id","");
     content.appendChild(middle);
     middle.setAttribute("id","middle");
     const introduction = document.createElement("p")
@@ -14,7 +17,7 @@ const Home = () =>{
     introduction.textContent = "You know the rules of bodybuilding, eat big to get big. Garfield's Bulkers Paradise has meal options for all the fellow gymrats that are on a bulk. We serve foods high in calories but with the right macros to help you in your bodybuilding journey.";
     middle.appendChild(img);
     img.setAttribute("id","homeImage");
-    img.setAttribute("src","./buff-garfield.png");
+    img.setAttribute("src","./img/buff-garfield.png");
     const ul = document.createElement("ul");
     middle.appendChild(ul);
     ul.appendChild(document.createElement("li"));
