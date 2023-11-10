@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "AnandaBlack";
+    src: url("fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf");
+}
+
+body {
+    background-image: url("./garfield.jpeg");
+    background-size: 100px;
+    margin: 0px;
+    font-family: "Roboto",
+}
+
+#content {
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+#header {
+    display: grid;
+    background-color: darkblue;
+    color: white;
+}
+
+h1 {
+    margin: 0px;
+    padding-top: 25px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    font-family: "AnandaBlack";
+    font-size: 50px;
+    color: orange;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-family: "Roboto";
+    font-size: 25px;
+    gap: 25px;
+}
+
+span > p:hover {
+    cursor: pointer;
+    color: orange;
+}
+
+#middle {
+    background-color: rgb(227, 175, 217);
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    border-radius: 15px;
+    font-family: "Roboto";
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    -webkit-text-stroke: 1.3px red;
+    font-weight: bold;
+    padding: 0px 30px 30px;
+}
+
+#homeImage {
+    height: 500px;
+    width: 700px;
+    align-self: center;
+}
+
+#middle > p {
+    margin-bottom: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.miniTitle {
+    font-size: 40px;
+}
+
+#currentPage {
+    color: orange;
+}
+
+u {
+    text-underline-offset: 6px;
+}
