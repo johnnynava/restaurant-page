@@ -94,33 +94,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Menu: () => (/* binding */ Menu)
 /* harmony export */ });
 /* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-// {/* <div id="middleMenu">
-//             <div class="menuOption">
-//                 <img src="img/lasagna.png">
-//                 <p>Protein Lasagna</p>
-//             </div>
-//             <div class="menuOption">
-//                 <img src="img/chicken.png">
-//                 <p>Chicken and Rice</p>
-//             </div>
-//             <div class="menuOption">
-//                 <img src="img/steak.png">
-//                 <p>Steak</p>
-//             </div>
-//             <div class="menuOption">
-//                 <img src="img/english-breakfast.png">
-//                 <p>English Breakfast</p>
-//             </div>
-//             <div class="menuOption">
-//                 <img src="img/pancakes.png">
-//                 <p>Protein Pancakes</p>
-//             </div>
-//             <div class="menuOption">
-//                 <img src="img/protein-shake.png">
-//                 <p>Protein Shake</p>
-//             </div>
-//         </div> */}
-
 
 
 const Menu = () => {
@@ -130,7 +103,31 @@ const Menu = () => {
     _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[0].setAttribute("id","");
     _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[1].setAttribute("id","currentPage");
     _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[2].setAttribute("id","");
+    const middle = document.querySelector("#content div:nth-child(2)"); 
     middle.setAttribute("id","middleMenu");
+    for(let i=0;i<6;i++){
+    middle.appendChild(document.createElement("div"));
+    }
+    const menuOptions = document.querySelectorAll("#middleMenu>div");
+    for(let i=0;i<6;i++){
+        menuOptions[i].classList.add("menuOption");
+        menuOptions[i].appendChild(document.createElement("img"));
+        menuOptions[i].appendChild(document.createElement("p"));
+    }
+    const menuImgs = document.querySelectorAll(".menuOption>img");
+    const menuPs = document.querySelectorAll(".menuOption>p");
+    menuImgs[0].setAttribute("src","img/lasagna.png");
+    menuPs[0].textContent = "Protein Lasagna";
+    menuImgs[1].setAttribute("src","img/chicken.png");
+    menuPs[1].textContent ="Chicken and Rice";
+    menuImgs[2].setAttribute("src","img/steak.png");
+    menuPs[2].textContent = "Steak";
+    menuImgs[3].setAttribute("src","img/english-breakfast.png");
+    menuPs[3].textContent = "English Breakfast";
+    menuImgs[4].setAttribute("src","img/pancakes.png");
+    menuPs[4].textContent = "Protein Pancakes";
+    menuImgs[5].setAttribute("src","img/protein-shake.png");
+    menuPs[5].textContent = "Protein Shake";
 }
 
 
@@ -144,6 +141,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Contact: () => (/* binding */ Contact)
 /* harmony export */ });
 /* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* <div id="middleContact">
+<div class="contactOption">
+    <img src="img/reg-garfield.png">
+    <p class="name">Garfield</p>
+    <p>Executive Chef</p>
+    <p>079 2358 90X3</p>
+</div>
+<div class="contactOption">
+    <img src="img/jon.png">
+    <p class="name">Jon Arbuckle</p>
+    <p>Sous Chef</p>
+    <p>079 5248 9X71</p>  
+</div>
+<div class="contactOption">
+    <img src="img/odie.png">
+    <p class="name">Odie</p>
+    <p>Assistant Chef</p>
+    <p>070 8572 3X36</p> 
+    </div>  */
+
 
 
 const Contact = () => {
@@ -153,6 +170,36 @@ const Contact = () => {
     _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[0].setAttribute("id","");
     _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[1].setAttribute("id","");
     _header_js__WEBPACK_IMPORTED_MODULE_0__.ps[2].setAttribute("id","currentPage");
+    const middle = document.querySelector("#content div:nth-child(2)"); 
+    middle.setAttribute("id","middleContact");
+    for(let i=0; i<3; i++){
+        middle.appendChild(document.createElement("div"))
+    }
+    const contactOption = document.querySelectorAll("#middleContact>div");
+    for(let i=0 ;i<3; i++){
+        contactOption[i].appendChild(document.createElement("img"));
+        for(let o=0;o<3;o++){
+            contactOption[i].appendChild(document.createElement("p"));
+        }
+        contactOption[i].classList.add("contactOption");
+    }
+    const contactImgs = document.querySelectorAll(".contactOption>img");
+    const contactPs = document.querySelectorAll(".contactOption>p");
+    contactImgs[0].setAttribute("src","img/reg-garfield.png");
+    contactPs[0].textContent = "Garfield";
+    contactPs[0].classList.add("name");
+    contactPs[1].textContent = "Executive Chef";
+    contactPs[2].textContent = "079 2358 90X3";
+    contactImgs[1].setAttribute("src","img/jon.png");
+    contactPs[3].textContent = "Jon Arbuckle";
+    contactPs[3].classList.add("name");
+    contactPs[4].textContent = "Sous Chef";
+    contactPs[5].textContent = "079 5248 9X71";
+    contactImgs[2].setAttribute("src","img/odie.png");
+    contactPs[6].textContent = "Odie";
+    contactPs[6].classList.add("name");
+    contactPs[7].textContent = "Assistant Chef";
+    contactPs[8].textContent = "070 8572 3X36";
 }
 
 
